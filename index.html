@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WORDLE</title>
+
+    <link rel="stylesheet" href="main.css" />
+
+    <script src="data.js"></script>
+    <script src="main.js" defer></script>
+  </head>
+  <body>
+    <table id="word">
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+    </table>
+
+    <br />
+
+    <button onclick="alert('맨 앞 글자: ' + word[0]);">
+      맨 앞 글자 힌트 보기
+    </button>
+    <button onclick="alert('맨 앞 글자: ' + word[4]);">
+      맨 뒤 글자 힌트 보기
+    </button>
+
+    <br />
+    <br />
+
+    <div id="keyboard">
+      <div>
+        <div onclick="input('Q')">Q</div>
+        <div onclick="input('W')">W</div>
+        <div onclick="input('E')">E</div>
+        <div onclick="input('R')">R</div>
+        <div onclick="input('T')">T</div>
+        <div onclick="input('Y')">Y</div>
+        <div onclick="input('U')">U</div>
+        <div onclick="input('I')">I</div>
+        <div onclick="input('O')">O</div>
+        <div onclick="input('P')">P</div>
+      </div>
+      <br />
+      <div>
+        <div onclick="input('A')">A</div>
+        <div onclick="input('S')">S</div>
+        <div onclick="input('D')">D</div>
+        <div onclick="input('F')">F</div>
+        <div onclick="input('G')">G</div>
+        <div onclick="input('H')">H</div>
+        <div onclick="input('J')">J</div>
+        <div onclick="input('K')">K</div>
+        <div onclick="input('L')">L</div>
+      </div>
+      <br />
+      <div>
+        <div onclick="enter()">↩</div>
+        <div onclick="input('Z')">Z</div>
+        <div onclick="input('X')">X</div>
+        <div onclick="input('Y')">Y</div>
+        <div onclick="input('C')">C</div>
+        <div onclick="input('V')">V</div>
+        <div onclick="input('B')">B</div>
+        <div onclick="input('N')">N</div>
+        <div onclick="input('M')">M</div>
+        <div onclick="value = value.substring(0, value.length-1)">←</div>
+      </div>
+    </div>
+
+    <br />
+
+    <button onclick="document.location.reload()">새 단어로 하기</button>
+  </body>
+</html>
