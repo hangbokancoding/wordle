@@ -34,6 +34,7 @@ function enter() {
   for (let i = 0; i < 5; i++) {
     tds[i].style.color = "white";
     let textContent = tds[i].textContent;
+    let keyboard = document.getElementById("key-" + textContent.toLowerCase());
     let color = "";
 
     if (textContent == "") continue;
@@ -45,8 +46,7 @@ function enter() {
     else color = "gray";
 
     tds[i].className = color;
-    document.getElementById("key-" + textContent.toLowerCase()).className =
-      color;
+    keyboard.className = keyboard.className == "green" ? "green" : color;
   }
 
   lineNum++;
