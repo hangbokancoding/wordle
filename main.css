@@ -39,3 +39,26 @@
   background-color: #6aaa64;
   color: white;
 }
+
+button {
+  all: unset;
+  padding: 5px 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.red-btn {
+  background-color: #ff9494;
+}
+
+.red-btn:hover {
+  background-color: #ff6767;
+}
+
+.blue-btn {
+  background-color: #94adff;
+}
+
+.blue-btn:hover {
+  background-color: #7192ff;
+}
