@@ -34,14 +34,19 @@ function enter() {
   for (let i = 0; i < 5; i++) {
     tds[i].style.color = "white";
     let textContent = tds[i].textContent;
+    let color = "";
 
     if (textContent == "") continue;
-    else if (textContent == word[i]) tds[i].style.backgroundColor = "#6aaa64";
     // green
-    else if (word.indexOf(textContent) > -1)
-      tds[i].style.backgroundColor = "#c9b458";
+    else if (textContent == word[i]) color = "green";
     // yellow
-    else tds[i].style.backgroundColor = "#787c7e"; // gray
+    else if (word.indexOf(textContent) > -1) color = "yellow";
+    // gray
+    else color = "gray";
+
+    tds[i].className = color;
+    document.getElementById("key-" + textContent.toLowerCase()).className =
+      color;
   }
 
   lineNum++;
